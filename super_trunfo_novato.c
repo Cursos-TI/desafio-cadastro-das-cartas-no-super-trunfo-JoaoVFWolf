@@ -24,7 +24,7 @@ int main() {
     printf("Digite um estado com uma letra de A-H:\n");
     scanf(" %c", &estado);
 
-    printf("Digite um codigo para a sua cidade com a letra do estado seguida de um numero de 01-04:\n");
+    printf("Digite um codigo para a sua cidade com a letra do estado seguida de um número de 01-04:\n");
     scanf("%4s", codigo);
     getchar(); // Estava com alguns erros, o programa pulava algumas linhas no terminal, então dei uma pesquisada e colocar alguns getchar(), ajudaram a não ocorrer mais
                // para limpar o buffer de entrada do ENTER
@@ -46,11 +46,11 @@ int main() {
     getchar(); 
 
     //peço para o usuario digitar os dados da carta 2
-    printf("Digite outro estado:\n");
+    printf("Digite outro estado com uma letra de A-H:\n");
     scanf(" %c", &estado2);
 
-    printf("Digite um codigo para a sua outra cidade:\n");
-    scanf("%s", &codigo2);
+    printf("Digite um codigo para a sua outra cidade com a letra do estado seguida de um número de 01-04:\n");
+    scanf("%s", codigo2);
     getchar();
 
     printf("Digite a sua outra cidade:\n");
@@ -75,8 +75,8 @@ int main() {
     printf("Código: %s\n", codigo);
     printf("Nome da Cidade: %s\n", cidade);
     printf("População: %d\n", populacao);
-    printf("Área: %f\n", area);
-    printf("PIB: %f\n", pib);
+    printf("Área: %.2f km²\n", area);
+    printf("PIB: %.2f bilhões de reais\n", pib);
     printf("Número de pontos turísticos: %d\n", pontos_t);
 
     // Aqui eu exibo no terminal a segunda carta
@@ -85,8 +85,8 @@ int main() {
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
     printf("População: %d\n", populacao2);
-    printf("Área: %f\n", area2);
-    printf("PIB: %f\n", pib2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de pontos turísticos: %d\n", pontos_t2);
 
     return 0;
