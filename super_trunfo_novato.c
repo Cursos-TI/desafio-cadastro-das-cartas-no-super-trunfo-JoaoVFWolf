@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <string.h> //Precisei incluir esta biblioteca também para corrigir alguns erros do meu código
 
 int main() {
     // Aqui eu declaro as variaveis da primeira carta
     char estado; 
-    char codigo[2]; 
+    char codigo[5]; 
     char cidade[25];
     int populacao = 0;
     float area = 0;
@@ -12,7 +13,7 @@ int main() {
 
     // Aqui eu declaro as variaveis da segunda carta
     char estado2; 
-    char codigo2[2]; 
+    char codigo2[5]; 
     char cidade2[25];
     int populacao2 = 0;
     float area2 = 0;
@@ -21,33 +22,50 @@ int main() {
 
     // Peço para o usuario digitar os dados da carta 1
     printf("Digite um estado com uma letra de A-H:\n");
-    scanf("%c", &estado);
+    scanf(" %c", &estado);
+
     printf("Digite um codigo para a sua cidade com a letra do estado seguida de um numero de 01-04:\n");
-    scanf("%s", &codigo);
+    scanf("%4s", codigo);
+    getchar(); // Estava com alguns erros, o programa pulava algumas linhas no terminal, então dei uma pesquisada e colocar alguns getchar(), ajudaram a não ocorrer mais
+               // para limpar o buffer de entrada do ENTER
     printf("Digite uma cidade:\n");
-    scanf("%s", &cidade);
+    fgets(cidade, sizeof(cidade), stdin);  // Precisei colocar este fgets para ler cidades com espaços entre o nome
+    cidade[strcspn(cidade, "\n")] = 0;     
+
     printf("Digite a população da sua cidade:\n");
     scanf("%d", &populacao);
+
     printf("Digite a area em km² da sua cidade:\n");
     scanf("%f", &area);
+
     printf("Digite o pib da sua cidade:\n");
     scanf("%f", &pib);
+
     printf("Digite o numero de pontos turísticos da sua cidade:\n");
     scanf("%d", &pontos_t);
+    getchar(); 
 
     //peço para o usuario digitar os dados da carta 2
     printf("Digite outro estado:\n");
-    scanf("%c", &estado2);
+    scanf(" %c", &estado2);
+
     printf("Digite um codigo para a sua outra cidade:\n");
     scanf("%s", &codigo2);
+    getchar();
+
     printf("Digite a sua outra cidade:\n");
-    scanf("%s", &cidade2);
+    fgets(cidade2, sizeof(cidade2), stdin);
+    cidade2[strcspn(cidade2, "\n")] = 0;
+
     printf("Digite a população da sua outra cidade:\n");
     scanf("%d", &populacao2);
+
     printf("Digite a area em km² da sua outra cidade:\n");
     scanf("%f", &area2);
+
     printf("Digite o pib da sua outra cidade:\n");
     scanf("%f", &pib2);
+
     printf("Digite o numero de pontos turísticos da sua outra cidade:\n");
     scanf("%d", &pontos_t2);
 
