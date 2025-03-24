@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <string.h> //Precisei incluir esta biblioteca também para corrigir alguns erros do meu código
 
+// Função criada para calcular a densidade populacional
+float calcular_densidade_p(int populacao, float area){
+    return populacao / area;
+}
+
 int main() {
     // Aqui eu declaro as variaveis da primeira carta
     char estado; 
