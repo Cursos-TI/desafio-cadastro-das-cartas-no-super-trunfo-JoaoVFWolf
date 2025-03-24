@@ -79,6 +79,13 @@ int main() {
     printf("Digite o numero de pontos turísticos da sua outra cidade:\n");
     scanf("%d", &pontos_t2);
 
+    //Calculos da densidade populacional e pib per capita das duas cidades
+    float densidadep1 = calcular_densidade_p(populacao, area);
+    float pibpercapita1 = calcular_pib_per_capita(pib, populacao);
+
+    float densidadep2 = calcular_densidade_p(populacao2, area2);
+    float pibpercapita2 = calcular_pib_per_capita(pib2, populacao2);
+    
     // Aqui eu exibo no terminal a primeira carta
     printf("Carta 1:\n");
     printf("Estado: %c\n", estado);
