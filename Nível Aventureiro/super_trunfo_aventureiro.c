@@ -85,7 +85,7 @@ int main() {
 
     float densidadep2 = calcular_densidade_p(populacao2, area2);
     float pibpercapita2 = calcular_pib_per_capita(pib2, populacao2);
-    
+
     // Aqui eu exibo no terminal a primeira carta
     printf("Carta 1:\n");
     printf("Estado: %c\n", estado);
@@ -95,6 +95,8 @@ int main() {
     printf("Área: %.2f km²\n", area);
     printf("PIB: %.2f bilhões de reais\n", pib);
     printf("Número de pontos turísticos: %d\n", pontos_t);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadep1);
+    printf("PIB per Capita: %.2f reais\n", pibpercapita1);
 
     // Aqui eu exibo no terminal a segunda carta
     printf("Carta 2:\n");
@@ -105,7 +107,9 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de pontos turísticos: %d\n", pontos_t2);
-
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadep2);
+    printf("PIB per Capita: %.2f reais\n", pibpercapita2);
+    
     return 0;
 
 }
