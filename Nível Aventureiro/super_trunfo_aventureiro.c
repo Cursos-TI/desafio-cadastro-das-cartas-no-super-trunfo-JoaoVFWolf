@@ -6,6 +6,11 @@ float calcular_densidade_p(int populacao, float area){
     return populacao / area;
 }
 
+// Função para calcular o Pib per capita
+float calcular_pib_per_capita(float pib, int populacao){
+    return (pib *1000000000) / populacao; // realizo a multiplicação do PIB que está em bilhões, para convertê-lo em reais
+}
+
 int main() {
     // Aqui eu declaro as variaveis da primeira carta
     char estado; 
