@@ -90,9 +90,11 @@ int main() {
     //Calculos de todos atributos pedidos das cartas
     float densidadep1 = calcular_densidade_p(populacao, area);
     float pibpercapita1 = calcular_pib_per_capita(pib, populacao);
+    float superpoder1 = calcular_superpoder(populacao, area, pib,pontos_t, pibpercapita1, densidadep1);
 
     float densidadep2 = calcular_densidade_p(populacao2, area2);
     float pibpercapita2 = calcular_pib_per_capita(pib2, populacao2);
+    float superpoder2 = calcular_superpoder(populacao2, area2, pib2, pontos_t2, pibpercapita2, densidadep2);
 
     // Aqui eu exibo no terminal a primeira carta
     printf("Carta 1:\n");
