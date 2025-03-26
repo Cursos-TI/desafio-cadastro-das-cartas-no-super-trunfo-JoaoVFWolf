@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-
-#include <stdio.h>
 #include <string.h> 
 
 // Função criada para calcular a densidade populacional
@@ -107,7 +104,8 @@ int main() {
     printf("Número de pontos turísticos: %d\n", pontos_t);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadep1);
     printf("PIB per Capita: %.2f reais\n", pibpercapita1);
-
+    printf("Super Poder: %.2f\n", superpoder1); // Incluí o SUPERPODER
+    
     // Aqui eu exibo no terminal a segunda carta
     printf("Carta 2:\n");
     printf("Estado: %c\n", estado2);
@@ -119,7 +117,8 @@ int main() {
     printf("Número de pontos turísticos: %d\n", pontos_t2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadep2);
     printf("PIB per Capita: %.2f reais\n", pibpercapita2);
-
+    printf("Super Poder: %.2f\n", superpoder2); // Incluí o SUPERPODER
+    
     return 0;
 
 }
