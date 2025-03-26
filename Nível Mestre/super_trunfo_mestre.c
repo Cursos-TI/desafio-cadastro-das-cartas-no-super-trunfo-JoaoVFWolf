@@ -14,6 +14,11 @@ float calcular_pib_per_capita(float pib, unsigned long int populacao){
     return (pib *1000000000) / populacao; // realizo a multiplicação do PIB que está em bilhões, para convertê-lo em reais
 }
 
+//Função para calcular o Super Poder das cartas
+float calcular_superpoder(unsigned long int populacao,  float area, float pib, float pontos_t, float pibpercapita, float densidadep){
+    return populacao + area + (pib * 1000000000) + pontos_t + pibpercapita + (1 / densidadep);
+}
+
 int main() {
     // Aqui eu declaro as variaveis da primeira carta
     char estado; 
